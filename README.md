@@ -23,7 +23,7 @@ gcc --version
 ```
 En caso de no tener el compilador de C en tu entorno local, puedes instalarlo  ejecutando en tu terminal el siguiente comando:
 ```bash
-sudo apt-get pdate
+sudo apt-get update
 sudo apt- get  install gcc
 ```
 
