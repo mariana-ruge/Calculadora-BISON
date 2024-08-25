@@ -80,6 +80,7 @@ A continuación deberás clonar este repositorio a tu entorno local.
 ### Ejecuta el proyecto
 
 1.  Compila el proyecto, primero con BISON y después con C y Flex. De la siguiente forma.
+
 	1.1: Compila con bison
 	```bash
 		bison -d calc.y
