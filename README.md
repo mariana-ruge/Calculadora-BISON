@@ -83,16 +83,20 @@ A continuación deberás clonar este repositorio a tu entorno local.
 	1.1: Compila con bison
 	```bash
 		bison -d calc.y
-```
+    ```
+
 	1.2: Compila con el compilador de c y flex
+
+    ```bash
 		  gcc calc.tab.c  lex.yy.c -o calc -lfl
+    ```
 
 2. Si la compilación se realizó sin errores, puedes correr el programa con el siguiente comando.
+
     ```
 	./calc
 	```
+
 En la terminal se mostrará el título "Calculadora Simple" y se mostrará un puntero indicando que espera la entrada de la operación a realizar. Al dar "enter" se podrá ver el resultado.
 Para finalizar el programa se debe dar `ctrl + C`
-
-###### Fin del README
 
