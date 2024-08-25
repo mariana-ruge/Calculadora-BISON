@@ -12,7 +12,7 @@ En este repositorio se encuentra el desarrollo de una cálculadora básica imple
 ## Uso - Instrucciones para correr el proyecto de forma local.
 
 ### Requisitos
-1 .**  Tener GCC  (Compilador de C): **
+1 .**Tener GCC  (Compilador de C):**
 Este proyecto necesita el compilador de C para generar los ejecutables necesarios de Flex y Bison. La versión usada para el desarrollo es la siguiente:
 
     gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
@@ -27,7 +27,7 @@ sudo apt-get pdate
 sudo apt- get  install gcc
 ```
 
-2 .  ** Instalar Bison: **
+2 .  **Instalar Bison:**
 También es necesario una herramienta de análisis sintáctico, en este caso deberás instalar Bison. La versión de Bison usada para este proyecto es la siguiente:
 ```bash
 	bison (GNU Bison) 3.8.2
@@ -42,7 +42,7 @@ sudo apt-get update
 sudo apt- get  install bison
 ```
 
-3 .  **Instalar Flex: **
+3 .  **Instalar Flex:**
 Se debe instalar una herramienta para el análisis léxico, este generará un scanner a partir de un conjunto de reglas, conocida como Flex.
 
 La versión de Flex usada en este proyecto es:
