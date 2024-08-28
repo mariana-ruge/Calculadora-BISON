@@ -1,24 +1,24 @@
 %{
-#include "calc.tab.h" // Incluir el archivo de encabezado generado por Bison
-void yyerror(const char *s); // Declarar la función de error
+#include "calc.tab.h"
+#include <stdlib.h>
+#include <ctype.h>
 %}
 
 %%
 
-[0-9]+(\.[0-9]+)?   { yylval.fval = atof(yytext); return NUMBER; } // Captura números enteros o decimales y los convierte a float
-
-[ \t]+              { /* Ignorar espacios */ } // Ignora espacios en blanco y tabulaciones
-
-\n                  { return EOL; } // Retorna EOL al encontrar un salto de línea
-
-[-+*/()]            { return yytext[0]; } // Retorna operadores aritméticos y paréntesis
-
-[a-zA-Z]+           { yyerror("Error: Solo se aceptan valores numéricos en este programa."); } // Captura letras y muestra error si no son números
-
-.                   { yyerror("Error: Carácter no reconocido."); } // Captura cualquier carácter no reconocido y muestra error
+[0-9]+\.[0-9]+    { yylval.val = atof(yytext); return NUMBER; }
+[0-9]+            { yylval.val = atof(yytext); return NUMBER; }
+"+"                { return ADD; }
+"-"                { return SUB; }
+"*"                { return MUL; }
+"/"                { return DIV; }
+"^"                { return EXP; }
+"\n"               { return EOL; }
+[ \t]              { /* Ignore whitespace */ }
+.                  { /* Ignore other characters */ }
 
 %%
 
-int yywrap() {
-    return 1; // Función que indica el final de la entrada
+int yywrap(void) {
+    return 1;
 }

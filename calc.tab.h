@@ -55,7 +55,13 @@ extern int yydebug;
     YYerror = 256,                 /* error  */
     YYUNDEF = 257,                 /* "invalid token"  */
     NUMBER = 258,                  /* NUMBER  */
-    EOL = 259                      /* EOL  */
+    ADD = 259,                     /* ADD  */
+    SUB = 260,                     /* SUB  */
+    MUL = 261,                     /* MUL  */
+    DIV = 262,                     /* DIV  */
+    EXP = 263,                     /* EXP  */
+    EOL = 264,                     /* EOL  */
+    UMINUS = 265                   /* UMINUS  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -64,11 +70,11 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 9 "calc.y"
+#line 11 "calc.y"
 
-    float fval; //Definicion de una variable para almacenar los variables de los token, usando NUMBER como flotante (float)
+    double val;
 
-#line 72 "calc.tab.h"
+#line 78 "calc.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;
