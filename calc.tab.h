@@ -61,7 +61,8 @@ extern int yydebug;
     DIV = 262,                     /* DIV  */
     EXP = 263,                     /* EXP  */
     EOL = 264,                     /* EOL  */
-    UMINUS = 265                   /* UMINUS  */
+    ABS = 265,                     /* ABS  */
+    UMINUS = 266                   /* UMINUS  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -70,11 +71,11 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 11 "calc.y"
+#line 19 "calc.y"
 
-    double val;
+    double val; //Almacenar valores de tipo double, se usa para tokens que usan números de tipo flotante
 
-#line 78 "calc.tab.h"
+#line 79 "calc.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;
