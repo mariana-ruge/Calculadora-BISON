@@ -89,7 +89,7 @@ A continuación deberás clonar este repositorio a tu entorno local.
 	1.2: Compila con el compilador de c y flex
 
     ```bash
-		  gcc calc.tab.c  lex.yy.c -o calc -lfl
+		  gcc -o calc calc.tab.c lex.yy.c -ll -lm
     ```
 
 2. Si la compilación se realizó sin errores, puedes correr el programa con el siguiente comando.
